@@ -1,8 +1,8 @@
 #include <stdio.h>
-
- main(int argc, char const *argv[])
+ int main(int argc, char const *argv[])
 {
-    printf("Hola perro"); 
-    printf("/nMi nombre es: Franco");  //otro ejemplo
+    printf("n\Hola perro"); 
+    printf("n\Mi nombre es: Franco");  //otro ejemplo la barra va al otro lado
     
 }
+
