@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 }
 
 
-
+//promedio seccion
 void proceso1(){
 
 int i = 0;
@@ -51,7 +51,7 @@ cout<<"El promedio general de la sección es de: "<<result1<<endl;
 
 
 }
-
+//contar estudiantes aprobados o reprobados
 void proceso2(){
 
 
@@ -62,11 +62,11 @@ int i = 0;
 while(i < 8){
 
 
-cantidad1=alumnos[i];
+cantidad1=alumnos[i]; // se utiliza para contar los alumnos en total
 
 i++;
 
-if(promedio[i]>=70){
+if(promedio[i]>=70){// se necesita acceder al promedio correspondiente del arreglo pir eso el promedio[i]
     aprobados++;  //La instruccion aprobado++ incrementa en 1 el valor de la variable aprobados, osea q esta contando un estudiante mas q a aprobado
 
 

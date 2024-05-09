@@ -35,7 +35,9 @@ void proceso1() {
             cout << "Digite un numero: [" << i << "][" << j << "]: ";
             cin >> numeros[i][j];
             j++;
-        }
+        }/*En esta parte como ya se definio el numero de filas y columnas ahora solo falta agregar los 
+        elemntos que van a ir detro y para eso se utiliza el numeros[i][j], para que ingrese los valores
+        hasta que el bucle se lo permita (numeros de filas y columnas definidas)*/
         i++;
     }
 
@@ -77,20 +79,25 @@ void multiplicar() {
         return;
     }
 
-    int result[100][100];
+    int result[100][100];//se declara un array result para almacenar el resultado
 
     int i = 0;
     while (i < filas) {
         int j = 0;
         while (j < columnas2) {
-            result[i][j] = 0;
+            result[i][j] = 0;//se define en 0 para asegurar que no tenga ningun valor residual o basura
             int k = 0;
             while (k < columnas) {
                 result[i][j] += numeros[i][k] * numeros2[k][j];
+                /*result al ser 0 y sumarlo con el producto de los dos numeros solo darias la 
+            multiplicacion pq estraia multiplicando y sumando con 0, si dejamps el result normal
+            se le sumaria el producto mas los valores del bucle*/
                 k++;
             }
             j++;
-        }
+        }/*se realiza otro ciclo k recorre las columnas de las matriz , para cada k se multiplica
+    el elemento correspondiente de de la fila de la primera matriz y lo mismo pero con las columnas 
+    de la segunda matriz*/
         i++;
     }
 
@@ -104,5 +111,7 @@ void multiplicar() {
         }
         cout << "\n";
         i1++;
-    }
+    }/*Este proceso se utiliza para imprimir el resultado final de la multiplicacion
+emtre matrices*/
+
 }
